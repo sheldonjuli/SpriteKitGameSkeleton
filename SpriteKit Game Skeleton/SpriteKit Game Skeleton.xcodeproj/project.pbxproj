@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240B3AE921557C0400A08341 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B3AE821557C0400A08341 /* Constants.swift */; };
 		24856C5B2155631C0058BA4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24856C5A2155631C0058BA4B /* AppDelegate.swift */; };
 		24856C5D2155631C0058BA4B /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 24856C5C2155631C0058BA4B /* GameScene.sks */; };
 		24856C612155631C0058BA4B /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24856C602155631C0058BA4B /* GameScene.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		240B3AE821557C0400A08341 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		24856C572155631C0058BA4B /* SpriteKit Game Skeleton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpriteKit Game Skeleton.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24856C5A2155631C0058BA4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24856C5C2155631C0058BA4B /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		240B3AE721557BDA00A08341 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				240B3AE821557C0400A08341 /* Constants.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		24856C4E2155631C0058BA4B = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +76,7 @@
 				24856C672155631D0058BA4B /* Assets.xcassets */,
 				24856C692155631D0058BA4B /* LaunchScreen.storyboard */,
 				24856C6C2155631D0058BA4B /* Info.plist */,
+				240B3AE721557BDA00A08341 /* Utility */,
 			);
 			path = "SpriteKit Game Skeleton";
 			sourceTree = "<group>";
@@ -145,6 +156,7 @@
 				24856C612155631C0058BA4B /* GameScene.swift in Sources */,
 				24856C632155631C0058BA4B /* GameViewController.swift in Sources */,
 				24856C5B2155631C0058BA4B /* AppDelegate.swift in Sources */,
+				240B3AE921557C0400A08341 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

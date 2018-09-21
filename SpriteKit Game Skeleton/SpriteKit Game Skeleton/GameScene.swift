@@ -12,9 +12,9 @@ import GameplayKit
 class GameScene: SKScene {
 
     override func didMove(to view: SKView) {
-        let gameSceneBackground = SKSpriteNode(imageNamed: "gameSceneBackground")
-        gameSceneBackground.anchorPoint = CGPoint(x: 0, y: 0)
-        gameSceneBackground.position = CGPoint(x: 0, y: 0)
+        let gameSceneBackground = SKSpriteNode(imageNamed: ImageNames.gameSceneBackground)
+        gameSceneBackground.anchorPoint = ImageAnchorPoints.gameSceneBackground
+        gameSceneBackground.position = ImagePositions.gameSceneBackground
         addChild(gameSceneBackground)
     }
 }
