@@ -1,6 +1,6 @@
 //
 //  Popup.swift
-//  Angry Birds
+//  SpriteKit Game Skeleton
 //
 //  Created by Li Ju on 2018-09-20.
 //  Copyright © 2018 Li Ju. All rights reserved.

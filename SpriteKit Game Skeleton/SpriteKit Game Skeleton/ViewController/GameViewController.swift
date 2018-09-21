@@ -1,6 +1,6 @@
 //
 //  GameViewController.swift
-//  Angry Birds
+//  SpriteKit Game Skeleton
 //
 //  Created by Li Ju on 2018-09-13.
 //  Copyright © 2018 Li Ju. All rights reserved.
@@ -47,7 +47,17 @@ extension GameViewController: SceneManagerDelegate {
         }
     }
     
-    func present(scene:SKScene) {
+    
+    /**
+     Present a given scene.
+     
+     - Parameter scene: A new scene to be presented by the view.
+     - Returns: Void.
+     
+     ## Important Notes ##
+     Remove debug code for production.
+     */
+    func present(scene: SKScene) {
         if let view = self.view as! SKView? {
             
             // Make sure we start with a fresh scene
