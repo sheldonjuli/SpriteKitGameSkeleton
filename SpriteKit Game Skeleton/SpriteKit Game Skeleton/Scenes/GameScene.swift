@@ -10,11 +10,14 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
+    
+    var sceneManagerDelegate: SceneManagerDelegate?
 
     override func didMove(to view: SKView) {
         let gameSceneBackground = SKSpriteNode(imageNamed: ImageNames.gameSceneBackground)
         gameSceneBackground.anchorPoint = ImageAnchorPoints.gameSceneBackground
         gameSceneBackground.position = ImagePositions.gameSceneBackground
+        gameSceneBackground.zPosition = ZPositions.background
         addChild(gameSceneBackground)
     }
 }

@@ -9,13 +9,23 @@
 import SpriteKit
 
 struct ImageNames {
+    static let menuSceneBackground = "menuSceneBackground"
     static let gameSceneBackground = "gameSceneBackground"
+    
+    static let startButton = "startButton"
 }
 
 struct ImageAnchorPoints {
+    static let menuSceneBackground = CGPoint.zero
     static let gameSceneBackground = CGPoint.zero
 }
 
 struct ImagePositions {
+    static let menuSceneBackground = CGPoint.zero
     static let gameSceneBackground = CGPoint.zero
+}
+
+struct ZPositions {
+    static let background: CGFloat = 1
+    static let hudLabel: CGFloat = 2
 }
