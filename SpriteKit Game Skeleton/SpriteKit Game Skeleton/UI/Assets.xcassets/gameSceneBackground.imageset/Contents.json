@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "menuBackground.png",
+      "filename" : "gameSceneBackground.png",
       "scale" : "1x"
     },
     {
