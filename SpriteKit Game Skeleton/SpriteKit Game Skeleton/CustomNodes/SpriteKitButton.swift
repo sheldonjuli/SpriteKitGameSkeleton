@@ -1,9 +1,9 @@
 //
 //  SpriteKitButton.swift
-//  Super Indie Runner
+//  SpriteKit Game Skeleton
 //
-//  Created by Johannes Ruof on 07/03/2017.
-//  Copyright © 2017 Rume Academy. All rights reserved.
+//  Created by Li Ju on 2018-09-21.
+//  Copyright © 2018 Li Ju. All rights reserved.
 //
 
 import SpriteKit

@@ -17,20 +17,28 @@ protocol SceneManagerDelegate {
 }
 
 class GameViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Default first scene is menu
         presentMenuScene()
     }
 }
 
 extension GameViewController: SceneManagerDelegate {
+    
+    /**
+     Present menu scene.
+     */
     func presentMenuScene() {
         let menuScene = MenuScene()
         menuScene.sceneManagerDelegate = self
         present(scene: menuScene)
     }
     
+    /**
+     Present level scene.
+     */
     func presentLevelScene() {
         let levelScene = LevelScene()
         levelScene.sceneManagerDelegate = self
@@ -52,7 +60,6 @@ extension GameViewController: SceneManagerDelegate {
      Present a given scene.
      
      - Parameter scene: A new scene to be presented by the view.
-     - Returns: Void.
      
      ## Important Notes ##
      Remove debug code for production.
