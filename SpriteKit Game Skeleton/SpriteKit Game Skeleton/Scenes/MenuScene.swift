@@ -26,7 +26,7 @@ class MenuScene: SKScene {
         
         let startButton = SpriteKitButton(buttonImage: ImageNames.startButton, action: goToGameScene, caseId: 0)
         startButton.position = CGPoint(x: frame.midX, y: frame.midY * 0.8)
-        //button.aspecScale(to: frame.size, width: false, multiplier: 0.2)
+        startButton.aspectScale(to: frame.size, regardingWidth: true, multiplier: AspectScaleMultiplier.startButton)
         startButton.zPosition = ZPositions.hudLabel
         addChild(startButton)
     }

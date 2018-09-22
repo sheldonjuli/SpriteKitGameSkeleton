@@ -37,3 +37,12 @@ struct ZPositions {
     static let hudLabel: CGFloat = 10
     static let hudBackground: CGFloat = 11
 }
+
+struct AspectScaleMultiplier {
+    // Relative to parent size
+    static let popup: CGFloat = 0.5
+    
+    static let startButton: CGFloat = 0.2
+    static let homeButton: CGFloat = 0.3
+    static let retryButton: CGFloat = 0.3
+}

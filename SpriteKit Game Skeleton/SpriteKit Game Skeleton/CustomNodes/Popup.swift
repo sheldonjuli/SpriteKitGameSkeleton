@@ -29,13 +29,13 @@ class Popup: SKSpriteNode {
     
     func setupPopup() {
         let background = SKSpriteNode(imageNamed: ImageNames.scoreSceneBackground)
-        background.aspectScale(to: size, regardingWidth: false, multiplier: 0.5)
-        
+        background.aspectScale(to: size, regardingWidth: true, multiplier: AspectScaleMultiplier.popup)
+
         let homeButton = SpriteKitButton(buttonImage: ImageNames.homeButton, action: popupButtonHandler, caseId: PopupButtons.home)
         let retryButton = SpriteKitButton(buttonImage: ImageNames.retryButton, action: popupButtonHandler, caseId: PopupButtons.retry)
 
-        homeButton.aspectScale(to: background.size, regardingWidth: true, multiplier: 0.2)
-        retryButton.aspectScale(to: background.size, regardingWidth: true, multiplier: 0.2)
+        homeButton.aspectScale(to: background.size, regardingWidth: true, multiplier: AspectScaleMultiplier.homeButton)
+        retryButton.aspectScale(to: background.size, regardingWidth: true, multiplier: AspectScaleMultiplier.retryButton)
         
         let buttonWidthOffset = retryButton.size.width / 2
         let buttonHeightOffset = retryButton.size.height / 2
