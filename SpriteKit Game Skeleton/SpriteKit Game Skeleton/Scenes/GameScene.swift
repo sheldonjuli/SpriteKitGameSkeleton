@@ -23,10 +23,26 @@ class GameScene: SKScene {
         addChild(gameSceneBackground)
         
         // Go to scoreScene after 3 seconds
-        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(goToScoreScene), userInfo: nil, repeats: false)
+        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(presentPopup), userInfo: nil, repeats: false)
     }
     
-    @objc func goToScoreScene() {
-        sceneManagerDelegate?.presentScoreScene()
+    @objc func presentPopup() {
+        let popupSize = frame.size * 0.5
+        let popup = Popup(size: popupSize)
+        popup.zPosition = ZPositions.hudBackground
+        popup.position = CGPoint(x: 300, y: 500)
+        popup.popupButtonHandlerDelegate = self
+        addChild(popup)
+    }
+}
+
+extension GameScene: PopupButtonHandlerDelegate {
+    
+    func homeButtonTapped() {
+        sceneManagerDelegate?.presentMenuScene()
+    }
+
+    func retryButtonTapped() {
+        sceneManagerDelegate?.presentGameScene()
     }
 }

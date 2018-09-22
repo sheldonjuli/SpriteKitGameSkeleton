@@ -14,6 +14,8 @@ struct ImageNames {
     static let scoreSceneBackground = "scoreSceneBackground"
     
     static let startButton = "startButton"
+    static let homeButton = "homeButton"
+    static let retryButton = "retryButton"
 }
 
 struct ImageAnchorPoints {
@@ -30,5 +32,8 @@ struct ImagePositions {
 
 struct ZPositions {
     static let background: CGFloat = 1
-    static let hudLabel: CGFloat = 2
+    
+    // hud elements should have the highest priorities
+    static let hudLabel: CGFloat = 10
+    static let hudBackground: CGFloat = 11
 }

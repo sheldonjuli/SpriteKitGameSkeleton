@@ -13,7 +13,6 @@ import GameplayKit
 protocol SceneManagerDelegate {
     func presentMenuScene()
     func presentGameScene()
-    func presentScoreScene()
 }
 
 class GameViewController: UIViewController {
@@ -38,12 +37,6 @@ extension GameViewController: SceneManagerDelegate {
         present(scene: gameScene)
     }
     
-    func presentScoreScene() {
-        let scoreScene = ScoreScene(size: view.bounds.size)
-        scoreScene.sceneManagerDelegate = self
-        present(scene: scoreScene)
-    }
-    
     func present(scene: SKScene) {
 
         if let view = self.view as! SKView? {
@@ -55,7 +48,6 @@ extension GameViewController: SceneManagerDelegate {
                 }
             }
 
-            
             scene.scaleMode = .aspectFill
             view.presentScene(scene)
             view.ignoresSiblingOrder = true
