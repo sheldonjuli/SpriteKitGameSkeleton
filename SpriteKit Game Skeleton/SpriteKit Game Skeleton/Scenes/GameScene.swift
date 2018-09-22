@@ -12,6 +12,8 @@ import GameplayKit
 class GameScene: SKScene {
     
     var sceneManagerDelegate: SceneManagerDelegate?
+    
+    var timer = Timer()
 
     override func didMove(to view: SKView) {
         let gameSceneBackground = SKSpriteNode(imageNamed: ImageNames.gameSceneBackground)
@@ -19,5 +21,12 @@ class GameScene: SKScene {
         gameSceneBackground.position = ImagePositions.gameSceneBackground
         gameSceneBackground.zPosition = ZPositions.background
         addChild(gameSceneBackground)
+        
+        // Go to scoreScene after 3 seconds
+        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(goToScoreScene), userInfo: nil, repeats: false)
+    }
+    
+    @objc func goToScoreScene() {
+        sceneManagerDelegate?.presentScoreScene()
     }
 }

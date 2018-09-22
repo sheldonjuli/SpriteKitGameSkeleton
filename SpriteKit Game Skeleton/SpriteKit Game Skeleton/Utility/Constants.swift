@@ -11,6 +11,7 @@ import SpriteKit
 struct ImageNames {
     static let menuSceneBackground = "menuSceneBackground"
     static let gameSceneBackground = "gameSceneBackground"
+    static let scoreSceneBackground = "scoreSceneBackground"
     
     static let startButton = "startButton"
 }
@@ -18,11 +19,13 @@ struct ImageNames {
 struct ImageAnchorPoints {
     static let menuSceneBackground = CGPoint.zero
     static let gameSceneBackground = CGPoint.zero
+    static let scoreSceneBackground = CGPoint.zero
 }
 
 struct ImagePositions {
     static let menuSceneBackground = CGPoint.zero
     static let gameSceneBackground = CGPoint.zero
+    static let scoreSceneBackground = CGPoint.zero
 }
 
 struct ZPositions {
