@@ -32,26 +32,7 @@ class GameScene: SKScene {
         lifeInt -= 1
         if lifeInt < 1 {
             timer.invalidate()
-            presentPopup()
+            sceneManagerDelegate?.presentScoreScene()
         }
-    }
-    
-    private func presentPopup() {
-        let popup = Popup(size: frame.size)
-        popup.zPosition = ZPositions.hudBackground
-        popup.position = CGPoint(x: frame.width / 2, y: frame.height / 2)
-        popup.popupButtonHandlerDelegate = self
-        addChild(popup)
-    }
-}
-
-extension GameScene: PopupButtonHandlerDelegate {
-    
-    func homeButtonTapped() {
-        sceneManagerDelegate?.presentMenuScene()
-    }
-
-    func retryButtonTapped() {
-        sceneManagerDelegate?.presentGameScene()
     }
 }

@@ -13,6 +13,7 @@ import GameplayKit
 protocol SceneManagerDelegate {
     func presentMenuScene()
     func presentGameScene()
+    func presentScoreScene()
 }
 
 class GameViewController: UIViewController {
@@ -35,6 +36,12 @@ extension GameViewController: SceneManagerDelegate {
         let gameScene = GameScene(size: view.bounds.size)
         gameScene.sceneManagerDelegate = self
         present(scene: gameScene)
+    }
+    
+    func presentScoreScene() {
+        let scoreScene = ScoreScene(size: view.bounds.size)
+        scoreScene.sceneManagerDelegate = self
+        present(scene: scoreScene)
     }
     
     func present(scene: SKScene) {
