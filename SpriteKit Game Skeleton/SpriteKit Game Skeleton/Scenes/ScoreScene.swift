@@ -14,11 +14,22 @@ class ScoreScene: SKScene {
     var currentScore: Int = 0
     
     override func didMove(to view: SKView) {
-       
-        print("Score \(currentScore)")
         
+        saveHighestScore()
         addBackground()
         presentPopup()
+    }
+    
+    private func saveHighestScore() {
+        let userDefaults = UserDefaults.standard
+        let highestScore = userDefaults.integer(forKey: "highestScore")
+        
+        print("Score \(currentScore)")
+        print("Highest \(highestScore)")
+        
+        if currentScore > highestScore {
+            userDefaults.set(currentScore, forKey: "highestScore")
+        }
     }
     
     private func addBackground() {
