@@ -13,6 +13,8 @@ class GameScene: SKScene {
     
     var sceneManagerDelegate: SceneManagerDelegate?
     
+    var currentScore: Int = 5
+    
     // Game over if lifeInt < 1
     private var lifeInt = 1
     private var timer = Timer()
@@ -32,7 +34,7 @@ class GameScene: SKScene {
         lifeInt -= 1
         if lifeInt < 1 {
             timer.invalidate()
-            sceneManagerDelegate?.presentScoreScene()
+            sceneManagerDelegate?.presentScoreScene(currentScore: currentScore)
         }
     }
 }

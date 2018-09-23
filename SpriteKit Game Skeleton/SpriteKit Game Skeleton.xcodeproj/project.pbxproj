@@ -82,6 +82,14 @@
 			path = CustomNodes;
 			sourceTree = "<group>";
 		};
+		2436254A2157FABD007FBF8C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				24856C622155631C0058BA4B /* GameViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		24856C4E2155631C0058BA4B = {
 			isa = PBXGroup;
 			children = (
@@ -105,11 +113,11 @@
 				240B3AEA215594A000A08341 /* Scenes */,
 				24856C5A2155631C0058BA4B /* AppDelegate.swift */,
 				24856C5C2155631C0058BA4B /* GameScene.sks */,
-				24856C622155631C0058BA4B /* GameViewController.swift */,
 				24856C642155631C0058BA4B /* Main.storyboard */,
 				24856C672155631D0058BA4B /* Assets.xcassets */,
 				24856C692155631D0058BA4B /* LaunchScreen.storyboard */,
 				24856C6C2155631D0058BA4B /* Info.plist */,
+				2436254A2157FABD007FBF8C /* ViewControllers */,
 				240B3AE721557BDA00A08341 /* Utility */,
 			);
 			path = "SpriteKit Game Skeleton";

@@ -10,12 +10,17 @@ class ScoreScene: SKScene {
     
     var sceneManagerDelegate: SceneManagerDelegate?
     
+    // Will be set by GameScene
+    var currentScore: Int = 0
+    
     override func didMove(to view: SKView) {
         let scoreSceneBackground = SKSpriteNode(imageNamed: ImageNames.scoreSceneBackground)
         scoreSceneBackground.anchorPoint = ImageAnchorPoints.scoreSceneBackground
         scoreSceneBackground.position = ImagePositions.scoreSceneBackground
         scoreSceneBackground.zPosition = ZPositions.background
         addChild(scoreSceneBackground)
+        
+        print("Score \(currentScore)")
         
         presentPopup()
     }
