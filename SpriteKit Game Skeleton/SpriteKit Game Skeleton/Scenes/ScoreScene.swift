@@ -14,15 +14,19 @@ class ScoreScene: SKScene {
     var currentScore: Int = 0
     
     override func didMove(to view: SKView) {
+       
+        print("Score \(currentScore)")
+        
+        addBackground()
+        presentPopup()
+    }
+    
+    private func addBackground() {
         let scoreSceneBackground = SKSpriteNode(imageNamed: ImageNames.scoreSceneBackground)
         scoreSceneBackground.anchorPoint = ImageAnchorPoints.scoreSceneBackground
         scoreSceneBackground.position = ImagePositions.scoreSceneBackground
         scoreSceneBackground.zPosition = ZPositions.background
         addChild(scoreSceneBackground)
-        
-        print("Score \(currentScore)")
-        
-        presentPopup()
     }
     
     private func presentPopup() {
