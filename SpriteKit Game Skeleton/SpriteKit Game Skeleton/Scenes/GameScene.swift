@@ -14,8 +14,8 @@ class GameScene: SKScene {
     var sceneManagerDelegate: SceneManagerDelegate?
     
     // Game over if lifeInt < 1
-    var lifeInt = 1
-    var timer = Timer()
+    private var lifeInt = 1
+    private var timer = Timer()
 
     override func didMove(to view: SKView) {
         let gameSceneBackground = SKSpriteNode(imageNamed: ImageNames.gameSceneBackground)
@@ -36,7 +36,7 @@ class GameScene: SKScene {
         }
     }
     
-    func presentPopup() {
+    private func presentPopup() {
         let popup = Popup(size: frame.size)
         popup.zPosition = ZPositions.hudBackground
         popup.position = CGPoint(x: frame.width / 2, y: frame.height / 2)
