@@ -13,6 +13,8 @@ class GameScene: SKScene {
     
     var sceneManagerDelegate: SceneManagerDelegate?
     
+    // Game over if lifeInt < 1
+    var lifeInt = 1
     var timer = Timer()
 
     override func didMove(to view: SKView) {
@@ -22,11 +24,19 @@ class GameScene: SKScene {
         gameSceneBackground.zPosition = ZPositions.background
         addChild(gameSceneBackground)
         
-        // Go to scoreScene after 3 seconds
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(presentPopup), userInfo: nil, repeats: false)
+        // Counts every second
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(startGameTimer), userInfo: nil, repeats: true)
     }
     
-    @objc func presentPopup() {
+    @objc func startGameTimer() {
+        lifeInt -= 1
+        if lifeInt < 1 {
+            timer.invalidate()
+            presentPopup()
+        }
+    }
+    
+    func presentPopup() {
         let popup = Popup(size: frame.size)
         popup.zPosition = ZPositions.hudBackground
         popup.position = CGPoint(x: frame.width / 2, y: frame.height / 2)
