@@ -73,7 +73,7 @@ extension GameViewController: GADBannerViewDelegate {
     
     func addGADBanner() {
         let BannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
-        BannerView.isHidden = false
+        BannerView.isHidden = true
         let bannerHeight:CGFloat = 50.0
         BannerView.frame = CGRect(x: 0, y: view.bounds.maxY - bannerHeight, width: view.bounds.maxX, height: bannerHeight)
         BannerView.delegate = self
@@ -90,7 +90,7 @@ extension GameViewController: GADBannerViewDelegate {
     }
     
     func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
-        print("Banner failed to receive ads.")
-        bannerView.isHidden = false
+        print(error)
+        bannerView.isHidden = true
     }
 }
