@@ -9,6 +9,7 @@
 import UIKit
 import SpriteKit
 import GameplayKit
+import GoogleMobileAds
 
 protocol SceneManagerDelegate {
     func presentMenuScene()
@@ -21,6 +22,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presentMenuScene()
+        addGADBanner()
     }
 }
 
@@ -64,5 +66,31 @@ extension GameViewController: SceneManagerDelegate {
             view.showsFPS = true
             view.showsNodeCount = true
         }
+    }
+}
+
+extension GameViewController: GADBannerViewDelegate {
+    
+    func addGADBanner() {
+        let BannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+        BannerView.isHidden = false
+        let bannerHeight:CGFloat = 50.0
+        BannerView.frame = CGRect(x: 0, y: view.bounds.maxY - bannerHeight, width: view.bounds.maxX, height: bannerHeight)
+        BannerView.delegate = self
+        BannerView.adUnitID = GADValues.adUnitID
+        BannerView.rootViewController = self
+        BannerView.load(GADRequest())
+        BannerView.backgroundColor = UIColor.black
+        view.addSubview(BannerView)
+    }
+    
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print("Banner is receiving ads.")
+        bannerView.isHidden = false
+    }
+    
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        print("Banner failed to receive ads.")
+        bannerView.isHidden = false
     }
 }

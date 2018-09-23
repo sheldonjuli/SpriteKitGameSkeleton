@@ -46,3 +46,7 @@ struct AspectScaleMultiplier {
     static let homeButton: CGFloat = 0.3
     static let retryButton: CGFloat = 0.3
 }
+
+struct GADValues {
+    static let adUnitID = "ca-app-pub-3910607987474251/2410538868"
+}
