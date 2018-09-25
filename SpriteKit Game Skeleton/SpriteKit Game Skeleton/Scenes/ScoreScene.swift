@@ -16,7 +16,7 @@ class ScoreScene: SKScene {
     override func didMove(to view: SKView) {
         
         saveHighestScore()
-        addBackground()
+        addBackground(view: view)
         presentPopup()
     }
     
@@ -32,11 +32,9 @@ class ScoreScene: SKScene {
         }
     }
     
-    private func addBackground() {
-        let scoreSceneBackground = SKSpriteNode(imageNamed: ImageNames.scoreSceneBackground)
-        scoreSceneBackground.anchorPoint = ImageAnchorPoints.scoreSceneBackground
-        scoreSceneBackground.position = ImagePositions.scoreSceneBackground
-        scoreSceneBackground.zPosition = ZPositions.background
+    private func addBackground(view: SKView) {
+        
+        let scoreSceneBackground = SpriteKitSceneBackground(bounds: view.bounds, backgroundImageName: ImageNames.scoreSceneBackground)
         addChild(scoreSceneBackground)
     }
     

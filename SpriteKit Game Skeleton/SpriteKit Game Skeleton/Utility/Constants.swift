@@ -20,19 +20,15 @@ struct ImageNames {
 }
 
 struct ImageAnchorPoints {
-    static let menuSceneBackground = CGPoint.zero
-    static let gameSceneBackground = CGPoint.zero
-    static let scoreSceneBackground = CGPoint.zero
+    static let sceneBackground = CGPoint.zero
 }
 
 struct ImagePositions {
-    static let menuSceneBackground = CGPoint.zero
-    static let gameSceneBackground = CGPoint.zero
-    static let scoreSceneBackground = CGPoint.zero
+    static let sceneBackground = CGPoint.zero
 }
 
 struct ZPositions {
-    static let background: CGFloat = 1
+    static let sceneBackground: CGFloat = 1
     
     // hud elements should have the highest priorities
     static let hudLabel: CGFloat = 10

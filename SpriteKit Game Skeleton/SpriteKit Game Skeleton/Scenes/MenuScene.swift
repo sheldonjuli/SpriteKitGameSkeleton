@@ -17,18 +17,16 @@ class MenuScene: SKScene {
     var productId = InAppPurchases.productId
     
     override func didMove(to view: SKView) {
-        setupMenu()
         
+        setupMenu(view: view)
+    
         SKPaymentQueue.default().add(self)
         getPurchaseInfo()
     } 
     
-    func setupMenu() {
+    func setupMenu(view: SKView) {
         
-        let menuSceneBackground = SKSpriteNode(imageNamed: ImageNames.menuSceneBackground)
-        menuSceneBackground.anchorPoint = ImageAnchorPoints.menuSceneBackground
-        menuSceneBackground.position = ImagePositions.menuSceneBackground
-        menuSceneBackground.zPosition = ZPositions.background
+        let menuSceneBackground = SpriteKitSceneBackground(bounds: view.bounds, backgroundImageName: ImageNames.menuSceneBackground)
         addChild(menuSceneBackground)
         
         let startButton = SpriteKitButton(buttonImage: ImageNames.startButton, action: goToGameScene, caseId: 0)
