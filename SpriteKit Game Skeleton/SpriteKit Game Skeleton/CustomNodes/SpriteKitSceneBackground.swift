@@ -20,7 +20,7 @@ class SpriteKitSceneBackground: SKSpriteNode {
         
         backgroundNode = SKSpriteNode(imageNamed: backgroundImageName)
         backgroundNode.anchorPoint = ImageAnchorPoints.sceneBackground
-        backgroundNode.position = ImagePositions.sceneBackground
+        backgroundNode.position = CGPoint(x: bounds.midX, y: bounds.midY)
         backgroundNode.zPosition = ZPositions.sceneBackground
         
         // Scale to fit height

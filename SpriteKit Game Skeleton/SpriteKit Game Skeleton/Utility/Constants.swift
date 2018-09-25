@@ -20,7 +20,7 @@ struct ImageNames {
 }
 
 struct ImageAnchorPoints {
-    static let sceneBackground = CGPoint.zero
+    static let sceneBackground = CGPoint(x: 0.5, y: 0.5)
 }
 
 struct ImagePositions {
@@ -51,4 +51,15 @@ struct GADValues {
 
 struct InAppPurchases {
     static let productId = "com.liju.SpriteKit_Game_Skeleton.RemoveAds"
+}
+
+extension SKView {
+    
+    var startButtonPosition: CGPoint {
+        return CGPoint(x: bounds.midX, y: bounds.midY * 0.8)
+    }
+    
+    var noAdsButtonPosition: CGPoint {
+        return CGPoint(x: bounds.maxX - 100, y: bounds.maxY - 100)
+    }
 }

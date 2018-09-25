@@ -30,14 +30,14 @@ class MenuScene: SKScene {
         addChild(menuSceneBackground)
         
         let startButton = SpriteKitButton(buttonImage: ImageNames.startButton, action: goToGameScene, caseId: 0)
-        startButton.position = CGPoint(x: frame.midX, y: frame.midY * 0.8)
-        startButton.aspectScale(to: frame.size, regardingWidth: true, multiplier: AspectScaleMultiplier.startButton)
+        startButton.position = view.startButtonPosition
+        startButton.aspectScale(to: view.bounds.size, regardingWidth: true, multiplier: AspectScaleMultiplier.startButton)
         startButton.zPosition = ZPositions.hudLabel
         addChild(startButton)
         
         let noAdsButton = SpriteKitButton(buttonImage: ImageNames.noAdsButton, action: goToInAppPurchase, caseId: 0)
-        noAdsButton.position = CGPoint(x: frame.maxX - 100, y: frame.maxY - 100)
-        noAdsButton.aspectScale(to: frame.size, regardingWidth: true, multiplier: AspectScaleMultiplier.noAdsButton)
+        noAdsButton.position = view.noAdsButtonPosition
+        noAdsButton.aspectScale(to: view.bounds.size, regardingWidth: true, multiplier: AspectScaleMultiplier.noAdsButton)
         noAdsButton.zPosition = ZPositions.hudLabel
         addChild(noAdsButton)
     }
