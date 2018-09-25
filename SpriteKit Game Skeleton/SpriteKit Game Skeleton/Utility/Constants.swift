@@ -31,8 +31,8 @@ struct ZPositions {
     static let sceneBackground: CGFloat = 1
     
     // hud elements should have the highest priorities
-    static let hudLabel: CGFloat = 10
-    static let hudBackground: CGFloat = 11
+    static let hudBackground: CGFloat = 10
+    static let hudLabel: CGFloat = 11
 }
 
 struct AspectScaleMultiplier {
