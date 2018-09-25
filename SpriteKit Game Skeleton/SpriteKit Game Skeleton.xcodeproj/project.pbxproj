@@ -18,6 +18,7 @@
 		24856C662155631C0058BA4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24856C642155631C0058BA4B /* Main.storyboard */; };
 		24856C682155631D0058BA4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24856C672155631D0058BA4B /* Assets.xcassets */; };
 		24856C6B2155631D0058BA4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24856C692155631D0058BA4B /* LaunchScreen.storyboard */; };
+		2494A71421593D30000E8141 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2494A71321593D30000E8141 /* StoreKit.framework */; };
 		24E13BBB2155D31100DAEB28 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E13BBA2155D31100DAEB28 /* Popup.swift */; };
 		24E13BBD2155D7F700DAEB28 /* SKNodeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E13BBC2155D7F700DAEB28 /* SKNodeExtensions.swift */; };
 		24E13BBF2155DEA600DAEB28 /* CGSizeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E13BBE2155DEA600DAEB28 /* CGSizeExtensions.swift */; };
@@ -38,6 +39,7 @@
 		24856C672155631D0058BA4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24856C6A2155631D0058BA4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24856C6C2155631D0058BA4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2494A71321593D30000E8141 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		24E13BBA2155D31100DAEB28 /* Popup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
 		24E13BBC2155D7F700DAEB28 /* SKNodeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKNodeExtensions.swift; sourceTree = "<group>"; };
 		24E13BBE2155DEA600DAEB28 /* CGSizeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGSizeExtensions.swift; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2494A71421593D30000E8141 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +101,7 @@
 				24856C592155631C0058BA4B /* SpriteKit Game Skeleton */,
 				24856C582155631C0058BA4B /* Products */,
 				643A47E14E58D2C56744CF27 /* Pods */,
+				2494A71221593D30000E8141 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +128,14 @@
 				240B3AE721557BDA00A08341 /* Utility */,
 			);
 			path = "SpriteKit Game Skeleton";
+			sourceTree = "<group>";
+		};
+		2494A71221593D30000E8141 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2494A71321593D30000E8141 /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		643A47E14E58D2C56744CF27 /* Pods */ = {

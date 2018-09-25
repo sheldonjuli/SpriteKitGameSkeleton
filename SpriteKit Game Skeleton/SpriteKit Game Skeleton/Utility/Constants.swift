@@ -16,6 +16,7 @@ struct ImageNames {
     static let startButton = "startButton"
     static let homeButton = "homeButton"
     static let retryButton = "retryButton"
+    static let noAdsButton = "noAdsButton"
 }
 
 struct ImageAnchorPoints {
@@ -45,8 +46,13 @@ struct AspectScaleMultiplier {
     static let startButton: CGFloat = 0.2
     static let homeButton: CGFloat = 0.3
     static let retryButton: CGFloat = 0.3
+    static let noAdsButton: CGFloat = 0.2
 }
 
 struct GADValues {
     static let adUnitID = "ca-app-pub-3910607987474251/2410538868"
+}
+
+struct InAppPurchases {
+    static let productId = "com.liju.SpriteKit_Game_Skeleton.RemoveAds"
 }
