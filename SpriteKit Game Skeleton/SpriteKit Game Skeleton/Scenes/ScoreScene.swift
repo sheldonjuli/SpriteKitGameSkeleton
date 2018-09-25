@@ -34,7 +34,7 @@ class ScoreScene: SKScene {
     
     private func addBackground(view: SKView) {
         
-        let scoreSceneBackground = SpriteKitSceneBackground(bounds: view.bounds, backgroundImageName: ImageNames.scoreSceneBackground)
+        let scoreSceneBackground = SpriteKitSceneBackground(view: view, backgroundImageName: ImageNames.scoreSceneBackground)
         addChild(scoreSceneBackground)
     }
     
